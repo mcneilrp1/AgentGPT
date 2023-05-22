@@ -36,10 +36,13 @@ interface ChatWindowProps extends HeaderProps {
   className?: string;
   fullscreen?: boolean;
   scrollToBottom?: boolean;
+<<<<<<< HEAD:next/src/components/ChatWindow.tsx
   displaySettings?: boolean; // Controls if settings are displayed at the bottom of the ChatWindow
   openSorryDialog?: () => void;
   setAgentRun?: (name: string, goal: string) => void;
   visibleOnMobile?: boolean;
+=======
+>>>>>>> origin/feat/implement_agent_global_state:src/components/ChatWindow.tsx
 }
 
 const messageListId = "chat-window-message-list";
@@ -52,10 +55,13 @@ const ChatWindow = ({
   onSave,
   fullscreen,
   scrollToBottom,
+<<<<<<< HEAD:next/src/components/ChatWindow.tsx
   displaySettings,
   openSorryDialog,
   setAgentRun,
   visibleOnMobile,
+=======
+>>>>>>> origin/feat/implement_agent_global_state:src/components/ChatWindow.tsx
 }: ChatWindowProps) => {
   const [t] = useTranslation();
   const [hasUserScrolled, setHasUserScrolled] = useState(false);
@@ -341,7 +347,17 @@ const MacWindowHeader = (props: HeaderProps) => {
     </div>
   );
 };
+<<<<<<< HEAD:next/src/components/ChatWindow.tsx
 const ChatMessage = ({ message }: { message: Message }) => {
+=======
+const ChatMessage = ({
+  message,
+  className,
+}: {
+  message: Message;
+  className?: string;
+}) => {
+>>>>>>> origin/feat/implement_agent_global_state:src/components/ChatWindow.tsx
   const [t] = useTranslation();
 
   return (
@@ -355,8 +371,15 @@ const ChatMessage = ({ message }: { message: Message }) => {
       {message.type != MESSAGE_TYPE_SYSTEM && (
         // Avoid for system messages as they do not have an icon and will cause a weird space
         <>
+<<<<<<< HEAD:next/src/components/ChatWindow.tsx
           <div className="mr-2 inline-block h-[0.9em]">{getTaskStatusIcon(message, {})}</div>
           <span className="mr-2 font-bold">{t(getMessagePrefix(message), { ns: "chat" })}</span>
+=======
+          <div className="mr-2 inline-block h-[0.9em]">
+            {getTaskStatusIcon(message, {})}
+          </div>
+          <span className="mr-2 font-bold">{getMessagePrefix(message, t)}</span>
+>>>>>>> origin/feat/implement_agent_global_state:src/components/ChatWindow.tsx
         </>
       )}
 
