@@ -9,7 +9,11 @@ from reworkd_platform.web.api.agent.agent_service.agent_service_provider import 
 )
 from reworkd_platform.web.api.agent.analysis import Analysis
 from reworkd_platform.web.api.agent.model_settings import ModelSettings
+<<<<<<< HEAD
 from reworkd_platform.web.api.agent.tools.tools import get_external_tools, get_tool_name
+=======
+from reworkd_platform.web.api.agent.tools.wikipedia_search import Wikipedia
+>>>>>>> parent of e5d3a8c (🛠️ Tools selector (#569))
 
 router = APIRouter()
 
@@ -123,6 +127,7 @@ async def create_tasks(
             status_code=500,
             detail=f"An error occurred while processing the request. {error}",
         )
+<<<<<<< HEAD
 
 
 class ToolModel(BaseModel):
@@ -147,3 +152,5 @@ async def get_user_tools() -> ToolsResponse:
         for tool in tools
     ]
     return ToolsResponse(tools=formatted_tools)
+=======
+>>>>>>> parent of e5d3a8c (🛠️ Tools selector (#569))
