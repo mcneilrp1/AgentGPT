@@ -1,6 +1,7 @@
-{
-    "version": "0.2.0",
-    "configurations": [
+onfigurations": [
+        
+        application
+        AgentGPT
         application
         
         AgentGPT
@@ -8,7 +9,9 @@
             "name": "Next.js: debug server-side",
             "type": "node-terminal",
             "request": "launch",
-            "command": "npm run dev"
+            "command": "npm run dev"{
+    "version": "0.2.0",
+    "c
         },
         {
             "name": "Next.js: debug client-side",
